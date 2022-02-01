@@ -28,14 +28,14 @@ import {
 
 import './App.css'
 
-const ALERT_TIME_MS = 2000
-
 if (process.env.NODE_ENV !== 'development') {
   console.log = () => {}
   console.info = () => {}
   console.error = () => {}
   console.warn = () => {}
 }
+
+const ALERT_TIME_MS = 2000
 
 function App() {
   const prefersDarkMode = window.matchMedia(
@@ -59,19 +59,19 @@ function App() {
   )
   const [successAlert, setSuccessAlert] = useState('')
   const [guesses, setGuesses] = useState<string[]>(() => {
-    const loaded = loadGameStateFromLocalStorage()
-    // if (loaded?.solution !== solution) {
-    //   return []
-    // }
-    const gameWasWon = loaded?.guesses.includes(solution)
+    const loaded: any = loadGameStateFromLocalStorage()
+
+    if (loaded?.solution !== solution) {
+      return []
+    }
+    const gameWasWon = loaded.guesses.includes(solution)
     if (gameWasWon) {
       setIsGameWon(true)
     }
-    if (loaded?.guesses.length === 6 && !gameWasWon) {
+    if (loaded.guesses.length === 6 && !gameWasWon) {
       setIsGameLost(true)
     }
-
-    return loaded?.guesses || []
+    return loaded.guesses
   })
 
   const [stats, setStats] = useState(() => loadStats())
@@ -123,7 +123,7 @@ function App() {
     setCurrentGuess(currentGuess.slice(0, -1))
   }
 
-  const onEnter = () => {
+  const onEnter = async () => {
     if (isGameWon || isGameLost) {
       return
     }
@@ -148,12 +148,16 @@ function App() {
       setCurrentGuess('')
 
       if (winningWord) {
-        setStats(addStatsForCompletedGame(stats, guesses.length))
+        setStats(
+          async () => await addStatsForCompletedGame(stats, guesses.length)
+        )
         return setIsGameWon(true)
       }
 
       if (guesses.length === 5) {
-        setStats(addStatsForCompletedGame(stats, guesses.length + 1))
+        setStats(
+          async () => await addStatsForCompletedGame(stats, guesses.length + 1)
+        )
         setIsGameLost(true)
       }
     }
