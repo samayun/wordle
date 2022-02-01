@@ -30,6 +30,9 @@ import './App.css'
 
 if (process.env.NODE_ENV !== 'development') {
   console.log = () => {}
+  console.info = () => {}
+  console.error = () => {}
+  console.warn = () => {}
 }
 
 const ALERT_TIME_MS = 2000
@@ -87,8 +90,6 @@ function App() {
   }
 
   useEffect(() => {
-    // console.log(solution)
-
     saveGameStateToLocalStorage({
       guesses,
       solution: 'LOL 😂 লোকালস্টোরেজে আসছো ওকে খেলা হবে ⚽',

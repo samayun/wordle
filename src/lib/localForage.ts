@@ -1,4 +1,4 @@
-// import localStorage from 'localStorage'
+import localForage from 'localforage'
 
 const gameStateKey = 'gameState'
 
@@ -9,14 +9,14 @@ type StoredGameState = {
 
 export const saveGameStateToLocalStorage = (gameState: StoredGameState) => {
   localStorage.setItem(authorGivenKey, JSON.stringify(deveoperInfo))
-  localStorage.setItem(gameStateKey, JSON.stringify(gameState))
+  localForage.setItem(gameStateKey, gameState)
 }
 
 export const loadGameStateFromLocalStorage = async () => {
   try {
-    const state: any = await localStorage.getItem(gameStateKey)
+    const state: any = await localForage.getItem(gameStateKey)
 
-    return state ? (JSON.parse(state) as StoredGameState) : null
+    return state ? (state as StoredGameState) : null
   } catch (error) {
     console.log('ERROR IN : loadGameStateFromLocalStorage')
   }
@@ -44,14 +44,14 @@ const deveoperInfo = {
 
 export const saveStatsToLocalStorage = (gameStats: GameStats) => {
   localStorage.setItem(authorGivenKey, JSON.stringify(deveoperInfo))
-  localStorage.setItem(gameStatKey, JSON.stringify(gameStats))
+  localForage.setItem(gameStatKey, gameStats)
 }
 
 export const loadStatsFromLocalStorage = async () => {
   try {
-    const state: any = await localStorage.getItem(gameStateKey)
+    const state: any = await localForage.getItem(gameStateKey)
 
-    return state ? (JSON.parse(state) as StoredGameState) : null
+    return state ? (state as StoredGameState) : null
   } catch (error: any) {
     console.log(
       error.message || 'ERROR IN LOADING GAME STATE FROM LOCAL STORAGE'
