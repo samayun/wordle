@@ -1,4 +1,4 @@
-export const WORDLE_TITLE = 'বাংলা ওর্ডল'
+export const WORDLE_TITLE = 'শব্দখেলা'
 
 export const WIN_MESSAGES = [
   'সাবাস বাঘের বাচ্চা',
