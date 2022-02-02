@@ -46,7 +46,7 @@
 //   return stats ? (JSON.parse(stats) as GameStats) : null
 // }
 
-const gameStateKey = 'gameState'
+const gameStateKey = 'শব্দখেলা';
 
 type StoredGameState = {
   guesses: string[]
@@ -62,7 +62,7 @@ export const loadGameStateFromLocalStorage = () => {
   return state ? (JSON.parse(state) as StoredGameState) : null
 }
 
-const gameStatKey = 'gameStats'
+const gameStatKey = 'শব্দখেলা'
 
 export type GameStats = {
   winDistribution: number[]
