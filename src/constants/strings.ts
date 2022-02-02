@@ -7,9 +7,9 @@ export const WIN_MESSAGES = [
 ]
 export const GAME_COPIED_MESSAGE =
   'গেইম কপি করা হয়েছে, এবার সোসাল মিডিয়ায় শেয়ার করে দুনিয়াবাসীকে আপনার ট্যালেন্ট জানিয়ে দিন :joy:'
-export const ABOUT_GAME_MESSAGE = 'About this game'
-export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
-export const WORD_NOT_FOUND_MESSAGE = 'Not in wordlist'
+export const ABOUT_GAME_MESSAGE = 'এ গেম নিয়ে যত কথা'
+export const NOT_ENOUGH_LETTERS_MESSAGE = 'যথেষ্ট অক্ষর নেই'
+export const WORD_NOT_FOUND_MESSAGE = 'ওয়ার্ড লিস্টে নেই'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `আপনি পেরেছেন The correct word was ${solution}, আপনাকে কেয়া কসমেটিকস এর পক্ষ থেকে দেয়া হবে পরিবেশবান্ধব শুভেচ্ছা`
 export const ENTER_TEXT = 'Enter'
@@ -17,8 +17,8 @@ export const DELETE_TEXT = 'Delete'
 export const STATISTICS_TITLE = 'Statistics'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New word in'
-export const SHARE_TEXT = 'Share'
-export const TOTAL_TRIES_TEXT = 'Total tries'
-export const SUCCESS_RATE_TEXT = 'Success rate'
-export const CURRENT_STREAK_TEXT = 'Current streak'
-export const BEST_STREAK_TEXT = 'Best streak'
+export const SHARE_TEXT = 'পৃথিবীকে জানিয়ে দিন☺️'
+export const TOTAL_TRIES_TEXT = 'সর্বোচ্চ চেষ্টা'
+export const SUCCESS_RATE_TEXT = 'সফলতার হার'
+export const CURRENT_STREAK_TEXT = 'সর্বোচ্চ  ধারা (Streak)'
+export const BEST_STREAK_TEXT = 'সর্বোত্তম ধারা (Streak)'
