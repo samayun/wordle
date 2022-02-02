@@ -1,12 +1,17 @@
-export const WORDLE_TITLE = 'Xoss Wordle'
+export const WORDLE_TITLE = 'বাংলা ওর্ডল'
 
-export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
-export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
+export const WIN_MESSAGES = [
+  'সাবাস বাঘের বাচ্চা',
+  'অসাধারণ',
+  'ফাটিয়ে দিয়েছ মামা!',
+]
+export const GAME_COPIED_MESSAGE =
+  'গেইম কপি করা হয়েছে, এবার সোসাল মিডিয়ায় শেয়ার করে দুনিয়াবাসীকে আপনার ট্যালেন্ট জানিয়ে দিন :joy:'
 export const ABOUT_GAME_MESSAGE = 'About this game'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
 export const WORD_NOT_FOUND_MESSAGE = 'Not in wordlist'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `The word was ${solution}`
+  `আপনি পেরেছেন The correct word was ${solution}, আপনাকে কেয়া কসমেটিকস এর পক্ষ থেকে দেয়া হবে পরিবেশবান্ধব শুভেচ্ছা`
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
 export const STATISTICS_TITLE = 'Statistics'

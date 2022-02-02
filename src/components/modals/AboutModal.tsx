@@ -11,7 +11,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
         This is an open source clone of the game Wordle -{' '}
         <a
-          href="https://github.com/hannahcode/wordle"
+          href="https://github.com/samayun/wordle"
           className="underline font-bold"
         >
           check out the code here
