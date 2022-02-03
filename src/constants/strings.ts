@@ -12,8 +12,8 @@ export const NOT_ENOUGH_LETTERS_MESSAGE = 'যথেষ্ট অক্ষর �
 export const WORD_NOT_FOUND_MESSAGE = 'ওয়ার্ড লিস্টে নেই'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `আপনি পেরেছেন The correct word was ${solution}, আপনাকে কেয়া কসমেটিকস এর পক্ষ থেকে দেয়া হবে পরিবেশবান্ধব শুভেচ্ছা`
-export const GAME_OVER_MESSAGE = (solution: string) =>
-  `গেইম সমাপ্ত! আগামীকাল আবারো চেষ্টা করুন,আজকের সমাধান ছিল ${solution}`
+export const GAME_OVER_MESSAGE = (solution?: string) =>
+  `গেইম সমাপ্ত! আবারো চেষ্টা করুন`
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
 export const STATISTICS_TITLE = 'পরিসংখ্যান'
