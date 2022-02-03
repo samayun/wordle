@@ -15,11 +15,6 @@ const deveoperInfo = {
   warning: 'PLAY LIKE PRO NOW 😂',
 }
 
-export const handleResetState = () => {
-  localStorage.removeItem(gameStatKey)
-  window.location.reload()
-}
-
 type StoredGameState = {
   guesses: string[]
   solution?: string
@@ -52,4 +47,11 @@ export const saveStatsToLocalStorage = (gameStats: GameStats) => {
 export const loadStatsFromLocalStorage = () => {
   const stats = localStorage.getItem(gameStatKey)
   return stats ? (JSON.parse(stats) as GameStats) : null
+}
+
+export const handleResetState = () => {
+  localStorage.removeItem(gameStateKey)
+  localStorage.removeItem(gameStatKey)
+  localStorage.removeItem(gameStatKey)
+  window.location.reload()
 }
