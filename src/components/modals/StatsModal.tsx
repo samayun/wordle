@@ -31,6 +31,8 @@ export const StatsModal = ({
   isGameWon,
   handleShare,
 }: Props) => {
+  console.log('StatsModal winDistribution : ' + gameStats.winDistribution)
+
   if (gameStats.totalGames <= 0) {
     return (
       <BaseModal

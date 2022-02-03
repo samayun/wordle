@@ -2,6 +2,7 @@ import {
   InformationCircleIcon,
   ChartBarIcon,
   SunIcon,
+  RefreshIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -22,6 +23,7 @@ import {
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
+  handleResetState,
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
 } from './lib/localStorage'
@@ -160,11 +162,16 @@ function App() {
   }
 
   return (
-    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div className="flex w-80 mx-auto items-center mb-8 mt-12">
+    <div className="py-2 max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="flex w-80 mx-auto items-center mb-8 mt-2">
         <h1 className="text-xl grow font-bold dark:text-white">
           {WORDLE_TITLE}
         </h1>
+
+        <RefreshIcon
+          className="h-6 w-6 cursor-pointer dark:stroke-white"
+          onClick={() => handleResetState()}
+        />
         <SunIcon
           className="h-6 w-6 cursor-pointer dark:stroke-white"
           onClick={() => handleDarkMode(!isDarkMode)}

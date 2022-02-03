@@ -14,9 +14,9 @@ export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `আপনি পেরেছেন The correct word was ${solution}, আপনাকে কেয়া কসমেটিকস এর পক্ষ থেকে দেয়া হবে পরিবেশবান্ধব শুভেচ্ছা`
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
-export const STATISTICS_TITLE = 'Statistics'
-export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
-export const NEW_WORD_TEXT = 'New word in'
+export const STATISTICS_TITLE = 'পরিসংখ্যান'
+export const GUESS_DISTRIBUTION_TEXT = 'অনুমান বিতরণ'
+export const NEW_WORD_TEXT = 'নতুন শব্দ পাবেন'
 export const SHARE_TEXT = 'পৃথিবীকে জানিয়ে দিন☺️'
 export const TOTAL_TRIES_TEXT = 'সর্বোচ্চ চেষ্টা'
 export const SUCCESS_RATE_TEXT = 'সফলতার হার'
